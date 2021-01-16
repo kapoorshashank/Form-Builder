@@ -33,7 +33,25 @@ module.exports.authenticate = (req, res, next) => {
         // unknown user or wrong password
         else return res.status(404).json(info);
     })(req, res);
+
+
 }
+
+ // send to google to do the authentication
+    // profile gets us their basic information including their name
+    // email gets their emails
+module.exports.googleAuthenticate = (req, res, next) => {
+
+   passport.authenticate('google', { scope : ['profile', 'email'] }));
+
+    // the callback after google has authenticated the user
+    app.get('/auth/google/callback',
+            passport.authenticate('google', {
+                    successRedirect : '/userProfile',
+                    failureRedirect : '/'
+            }));
+
+};
 
 module.exports.userProfile = (req, res, next) =>{
     User.findOne({ _id: req._id },

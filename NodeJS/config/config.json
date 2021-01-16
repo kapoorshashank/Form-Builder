@@ -4,5 +4,10 @@
         "MONGODB_URI": "mongodb://localhost:27017/MEANStackDB",
         "JWT_SECRET": "SHASHANK@098",
         "JWT_EXP": "5m"
-    }
+    },
+    "googleAuth" : {
+		"clientID": "123",
+		"clientSecret": "xyz",
+		"callbackURL": "http://localhost:3000/auth/google/callback"
+	}
 }
