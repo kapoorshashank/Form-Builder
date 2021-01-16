@@ -3,9 +3,6 @@
 
 /* BASIC */
 
-html {
-  background-color: #56baed;
-}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -39,7 +36,16 @@ h2 {
   flex-direction: column; 
   justify-content: center;
   width: 100%;
-  padding: 10rem;
+  padding: 6rem;
+}
+
+.wrapper-app {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
 }
 
 #formContent {
