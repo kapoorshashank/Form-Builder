@@ -42,7 +42,7 @@ module.exports.authenticate = (req, res, next) => {
     // email gets their emails
 module.exports.googleAuthenticate = (req, res, next) => {
 
-   passport.authenticate('google', { scope : ['profile', 'email'] }));
+   passport.authenticate('google', { scope : ['profile', 'email'] })
 
     // the callback after google has authenticated the user
     app.get('/auth/google/callback',
